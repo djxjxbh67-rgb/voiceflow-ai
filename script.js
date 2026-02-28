@@ -260,7 +260,7 @@ function handleWaitlist(e) {
         success.style.display = 'block';
 
         // Also open mailto as a backup to actually capture the email
-        window.location.href = `mailto:founder@voiceflow-ai.com?subject=VoiceFlow AI Waitlist&body=Hi! I'd like to join the VoiceFlow AI waitlist.%0A%0AMy email: ${encodeURIComponent(email)}`;
+        window.location.href = `mailto:founder@voiceflowai.space?subject=VoiceFlow AI Waitlist&body=Hi! I'd like to join the VoiceFlow AI waitlist.%0A%0AMy email: ${encodeURIComponent(email)}`;
     }, 800);
 }
 
