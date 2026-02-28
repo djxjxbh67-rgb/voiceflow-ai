@@ -238,3 +238,30 @@ function animateCounter(el) {
 
 /* Expose scrollToSection globally */
 window.scrollToSection = scrollToSection;
+
+/* =====================
+   WAITLIST FORM
+   ===================== */
+function handleWaitlist(e) {
+    e.preventDefault();
+    const email = document.getElementById('waitlistEmail').value;
+    const form = document.getElementById('waitlistForm');
+    const success = document.getElementById('waitlistSuccess');
+    const btn = document.getElementById('waitlistBtn');
+
+    // Disable button
+    btn.disabled = true;
+    btn.textContent = 'Joining...';
+
+    // Simulate a short delay for UX (no real backend yet)
+    setTimeout(() => {
+        // Hide form, show success
+        form.style.display = 'none';
+        success.style.display = 'block';
+
+        // Also open mailto as a backup to actually capture the email
+        window.location.href = `mailto:founder@voiceflow-ai.com?subject=VoiceFlow AI Waitlist&body=Hi! I'd like to join the VoiceFlow AI waitlist.%0A%0AMy email: ${encodeURIComponent(email)}`;
+    }, 800);
+}
+
+window.handleWaitlist = handleWaitlist;

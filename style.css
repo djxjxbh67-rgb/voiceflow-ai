@@ -1113,8 +1113,114 @@ body::before {
     font-size: 1.1rem;
     color: var(--text-secondary);
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 auto 28px;
     line-height: 1.8;
+}
+
+/* Waitlist Form */
+.waitlist-form {
+    max-width: 520px;
+    margin: 0 auto 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 0;
+    border-radius: 60px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    background: var(--bg-card);
+    transition: var(--transition-smooth);
+}
+
+.form-row:focus-within {
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.2);
+}
+
+.form-input {
+    flex: 1;
+    padding: 16px 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-btn {
+    border-radius: 0 60px 60px 0;
+    white-space: nowrap;
+    padding: 16px 28px;
+}
+
+.form-hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+/* Waitlist Success */
+.waitlist-success {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
+}
+
+.waitlist-success .success-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.waitlist-success h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent-cyan);
+}
+
+.waitlist-success p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* CTA Alternative Contact */
+.cta-alt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.cta-alt-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.cta-alt-link {
+    font-size: 0.85rem;
+    color: var(--accent-violet);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.cta-alt-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.cta-alt-divider {
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 /* =====================
@@ -1128,9 +1234,23 @@ body::before {
 
 .footer-inner {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 48px;
     margin-bottom: 48px;
+}
+
+.footer-contact-email {
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+.footer-contact-email a {
+    color: var(--accent-violet);
+    font-weight: 500;
+}
+
+.footer-contact-email a:hover {
+    color: var(--text-primary);
 }
 
 .footer-brand .footer-logo {
